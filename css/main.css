@@ -245,18 +245,18 @@ btn:focus-visible {
   background-size: cover;
   border-bottom: 0.5rem solid var(--Brand-Secondary-Pale);
 
-  .banner__title,
+  /* .banner__title,
   .banner__text,
   .btn {
     translate: -3rem;
     opacity: 0;
     animation: slide_in 0.5s 1s forwards;
-  }
+  } */
 
-  .banner__text {
+  /* .banner__text {
     animation-delay: 1.2s;
-  }
-
+  } */
+  /* 
   .btn {
     animation-delay: 1.4s;
   }
@@ -264,7 +264,7 @@ btn:focus-visible {
   .banner__content {
     animation: wiggle 2s linear;
     animation-delay: 1.6s;
-  }
+  } */
 }
 
 .banner .container {
