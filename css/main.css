@@ -171,6 +171,7 @@ btn:focus-visible {
   position: sticky;
   top: 0;
   color: #000;
+  border-bottom: 0.1rem solid var(--Brand-Accent);
 }
 
 .header .container {
@@ -246,19 +247,15 @@ btn:focus-visible {
 }
 
 /* ---------- Banner ---------- */
-.banner {
-  /* background-image: linear-gradient(to bottom, #0009, #0009),
-    url(../images/Banner.jpg); */
+/* .banner {
   background-position: center;
   background-size: cover;
-
-  /* border-bottom: 0.5rem solid var(--Brand-Secondary-Pale); */
-}
+} */
 
 .banner .container {
   min-height: 50vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   padding-top: 3rem;
@@ -278,35 +275,34 @@ btn:focus-visible {
 }
 
 .banner__title {
-  /* font-size: 2.986rem; */
+  font-size: 1.784rem;
   font-family: "Roboto Flex";
   line-height: 1.3;
   color: var(--Brand-Accent);
 }
 
 .banner__text {
-  /* font-size: 1.15rem; */
+  font-size: 1.15rem;
   font-family: "Roboto Flex";
   text-align: justify;
   color: var(--Brand-Quaternary);
 }
 
-.banner--large {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
 .banner__img img {
-  max-width: 20.625rem;
-  max-height: 18.75rem;
+  max-width: 22.625rem;
+  max-height: 20.75rem;
   width: auto;
   height: auto;
   border-radius: 50%;
 }
 
 @media only screen and (min-width: 45em) {
-
+ 
+  .banner--large {
+    min-height: 100vh;
+   display: flex;
+   align-items: center;
+  }
   .banner .container {
     flex-direction: row;
   }
