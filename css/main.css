@@ -175,7 +175,8 @@ btn:focus-visible {
 
 .header .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -188,12 +189,34 @@ btn:focus-visible {
   line-height: 1.3;
 }
 
+.hamburger {
+  position: absolute;
+  right: 1rem;
+  display: block; /* Show button on mobile */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--Brand-Primary);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header__list.active {
+  display: flex; /* Show when active */
+  flex-direction: column;
+  background-color: var(--Brand-Tertiary);
+}
+
 .header__list {
+  display: none;
+  top: 60px;
+  left: 0;
+  text-align: center;
   padding: 0;
   margin: 0;
+  position: absolute;
   list-style-type: none;
   flex-direction: column;
-  display: block;
   width: 100%;
 }
 
@@ -226,6 +249,10 @@ btn:focus-visible {
     justify-content: space-between;
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .hamburger {
+    display: none;
   }
 
   .header__list {
@@ -290,7 +317,7 @@ btn:focus-visible {
 .banner__text {
   font-size: 1rem;
   font-family: "Roboto Flex";
-  text-align: justify;
+  text-align: center;
   color: var(--Brand-Primary);
 }
 
@@ -447,7 +474,6 @@ btn:focus-visible {
 
 .card__button {
   border-radius: var(--Radius);
-
 }
 
 @media only screen and (min-width: 45em) {
@@ -502,13 +528,13 @@ btn:focus-visible {
     justify-content: space-around;
   }
 
-    .card__info {
+  .card__info {
     align-items: flex-start;
     justify-content: center;
     max-width: 50%;
   }
 
-   .card--details {
+  .card--details {
     align-items: flex-start;
     margin: 0;
     padding: 0 0.5rem;
